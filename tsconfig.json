@@ -18,7 +18,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "removeComments": true,
-    "noEmit": false,
+    "noEmit": true,
     "declaration": true,
     "declarationDir": "types",
     "declarationMap": true,
