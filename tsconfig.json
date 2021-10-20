@@ -17,10 +17,19 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "removeComments": true,
+    "noEmit": false,
+    "declaration": true,
+    "declarationDir": "types",
+    "declarationMap": true,
+    "emitDeclarationOnly": false,
     "jsx": "react-jsx"
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }
