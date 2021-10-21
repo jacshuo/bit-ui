@@ -52,6 +52,7 @@ const Row: React.FunctionComponent<IRowProps> = (props) => {
           ' ')} style={style}>{renderChild(cols)}</div> :
       <div className={[
         styles['bit-row'],
+        styles['bit-grid-row'],
         styles[`bit-grid-row-${cols}`]].join(
           ' ')} style={style}>{renderChild(cols)}</div>;
   }

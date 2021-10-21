@@ -14,7 +14,6 @@
           }
         }
         @for $col from 0 through $cols {
-          //bit-grid-col-span-responsive-sm-24__30oIX
           .bit-grid-col-span-responsive-sm-#{$col} {
             @include test-flex-center();
             @include __media-query(sm) {
@@ -50,21 +49,6 @@
           .bit-grid-col-span-#{$col} {
             grid-column-start: span $col;
             @include test-flex-center();
-            //@each $bp in sm, md, lg, xl, xxl {
-            //  &.bit-col-span-responsive-#{$bp}-#{$col} {
-            //    @if ($bp==sm) {
-            //      @include __responsive-col-sm($col);
-            //    } @else if ($bp==md) {
-            //      @include __responsive-col-md($col);
-            //    } @else if ($bp==lg) {
-            //      @include __responsive-col-lg($col);
-            //    } @else if ($bp==xl) {
-            //      @include __responsive-col-xl($col);
-            //    } @else if ($bp==xxl) {
-            //      @include __responsive-col-xxl($col);
-            //    }
-            //  }
-            //}
           }
         }
       }
