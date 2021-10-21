@@ -16,8 +16,8 @@ const Row: React.FunctionComponent<IRowProps> = (props) => {
     children,
     style,
   } = props;
+  const childCount = React.Children.count(children);
   const renderChild = (columns: number) => {
-    const childCount = React.Children.count(children);
     return React.Children.map(children, (child) => {
       if (child && childCount) {
         const col = child as ReactComponentElement<any>;
@@ -42,30 +42,37 @@ const Row: React.FunctionComponent<IRowProps> = (props) => {
       return null;
     });
   };
+  console.log((cols || 24) % childCount === 0);
   if (cols) {
     return gutters ?
       <div className={[
         styles['bit-row'],
         styles['bit-grid-row'],
         styles[`bit-grid-row-${cols}`],
+        (cols || 24) % childCount === 0 ? '' : styles['bit-grid-row-auto-fit'],
         styles[`bit-grid-row-gutter-${gutters}`]].join(
           ' ')} style={style}>{renderChild(cols)}</div> :
       <div className={[
         styles['bit-row'],
         styles['bit-grid-row'],
-        styles[`bit-grid-row-${cols}`]].join(
+        styles[`bit-grid-row-${cols}`],
+        (cols || 24) % childCount === 0 ? '' : styles['bit-grid-row-auto-fit'],
+      ].join(
           ' ')} style={style}>{renderChild(cols)}</div>;
   }
   return gutters ? <div className={[
     styles['bit-row'],
     styles['bit-grid-row'],
     styles['bit-grid-row-24'],
-    styles[`bit-grid-row-gutter-${gutters}`]].join(
+      (cols || 24) % childCount === 0 ? '' : styles['bit-grid-row-auto-fit'],
+      styles[`bit-grid-row-gutter-${gutters}`]].join(
       ' ')} style={style}>{renderChild(24)}</div> :
     <div className={[
       styles['bit-row'],
       styles['bit-grid-row'],
-      styles['bit-grid-row-24']].join(
+      styles['bit-grid-row-24'],
+      (cols || 24) % childCount === 0 ? '' : styles['bit-grid-row-auto-fit'],
+    ].join(
         ' ')} style={style}>{renderChild(24)}</div>;
 };
 

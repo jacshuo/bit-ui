@@ -7,7 +7,7 @@
     @include test-show(#c1c1c1);
     @each $cols in 12, 18, 24 {
       &.bit-grid-row-#{$cols} {
-        grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
+        grid-template-columns: repeat($cols, minmax(1px, 1fr));
         @for $gap from 0 through 1920 {
           &.bit-grid-row-gutter-#{$gap} {
             grid-column-gap: __calculate-rem($gap);
@@ -55,6 +55,11 @@
     }
     
     &.bit-grid-row-24 {
+      grid-template-columns: repeat(24, minmax(1px, 1fr));
+    }
+    
+    // grid自适应
+    &.bit-grid-row-auto-fit {
       grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
     }
   }

@@ -5,13 +5,8 @@ import Col from '../components/layouts/Col';
 
 const Home: React.FunctionComponent<any> = () => {
   return <>
-    <Container fluidXL>
-      <Row cols={18}>
-        <Col>col-span-2</Col>
-        <Col>col-span-2</Col>
-        <Col>col-span-2</Col>
-        <Col>col-span-2</Col>
-        <Col>col-span-2</Col>
+    <Container>
+      <Row cols={12} gutters={5}>
       </Row>
       <div>I am not a row.</div>
     </Container>
