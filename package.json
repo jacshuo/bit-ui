@@ -1,5 +1,5 @@
 {
-  "name": "jui",
+  "name": "bit-ui",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -46,6 +46,8 @@
     "eslint": "^7.11.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.26.1",
-    "node-sass": "^6.0.1"
+    "file-loader": "^6.2.0",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^12.2.0"
   }
 }

@@ -1,0 +1,84 @@
+@function __black($opacity) {
+  @return rgba(0, 0, 0, $opacity)
+}
+
+@function __white($opacity) {
+  @return rgba(255, 255, 255, $opacity)
+}
+
+@function __calculate-rem($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue;
+}
+
+%visually-hidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+/*
+* @include triangle within a pseudo element and add positioning properties (ie. top, left)
+* $direction: up, down, left, right
+*/
+@mixin __triangle($direction, $size: 6px, $color: #222) {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  @if ($direction == 'up') {
+    border-bottom: $size solid $color;
+    border-left: 1/2*$size solid transparent;
+    border-right: 1/2*$size solid transparent;
+  } @else if ($direction == 'down') {
+    border-top: $size solid $color;
+    border-left: 1/2*$size solid transparent;
+    border-right: 1/2*$size solid transparent;
+  } @else if ($direction == 'left') {
+    border-top: 1/2*$size solid transparent;
+    border-bottom: 1/2*$size solid transparent;
+    border-right: $size solid $color;
+  } @else if ($direction == 'right') {
+    border-top: 1/2*$size solid transparent;
+    border-bottom: 1/2*$size solid transparent;
+    border-left: $size solid $color;
+  }
+}
+
+@mixin __ghost-vertical-align() {
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: .1px;
+  }
+}
+
+@mixin __truncate-text($overflow: ellipsis) {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: $overflow; // values are: clip, ellipsis, or a string
+}
+
+@mixin test-show($color: #787878) {
+  background-color: $color;
+  color: antiquewhite;
+  height: 60px;
+  width: 100%;
+}
+
+@mixin test-flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: antiquewhite;
+  font-size: __calculate-rem(18);
+  background-color: #253b0b;
+}

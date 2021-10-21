@@ -1,0 +1,278 @@
+@import 'helper';
+
+@mixin fluid {
+  width: 100%;
+}
+
+@mixin __media-query($point) {
+  @if ($point==xs) {
+    // Xtra small devices
+    @media screen and (max-width: 576px) {
+      @content;
+    }
+  } @else if ($point==sm) {
+    // Small devices (cellphones, 576px and up)
+    @media screen and (min-width: 576px) {
+      @content;
+    }
+  } @else if ($point==md) {
+    // Medium devices (tablets, 768px and up)
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if ($point==lg) {
+    // Large devices (desktops, 992px and up)
+    @media screen and (min-width: 992px) {
+      @content;
+    }
+  } @else if ($point==xl) {
+    // X-Large devices (large desktops, 1200px and up)
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  } @else if ($point==xxl) {
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media screen and (min-width: 1400px) {
+      @content;
+    }
+  }
+}
+
+/*
+Container
+*/
+@mixin __fluid-sm {
+  @include __media-query(xs) {
+    max-width: 100%;
+  }
+  @include __media-query(sm) {
+    max-width: 540px;
+  }
+  @include __media-query(md) {
+    max-width: 720px;
+  }
+  @include __media-query(lg) {
+    max-width: 960px;
+  }
+  @include __media-query(xl) {
+    max-width: 1140px;
+  }
+  @include __media-query(xxl) {
+    max-width: 1320px;
+  }
+}
+
+@mixin __fluid-md {
+  @include __media-query(xs) {
+    max-width: 100%;
+  }
+  @include __media-query(sm) {
+    max-width: 100%;
+  }
+  @include __media-query(md) {
+    max-width: 720px;
+  }
+  @include __media-query(lg) {
+    max-width: 960px;
+  }
+  @include __media-query(xl) {
+    max-width: 1140px;
+  }
+  @include __media-query(xxl) {
+    max-width: 1320px;
+  }
+}
+
+@mixin __fluid-lg {
+  @include __media-query(xs) {
+    max-width: 100%;
+  }
+  @include __media-query(sm) {
+    max-width: 100%;
+  }
+  @include __media-query(md) {
+    max-width: 100%;
+  }
+  @include __media-query(lg) {
+    max-width: 960px;
+  }
+  @include __media-query(xl) {
+    max-width: 1140px;
+  }
+  @include __media-query(xxl) {
+    max-width: 1320px;
+  }
+}
+
+@mixin __fluid-xl {
+  @include __media-query(xs) {
+    max-width: 100%;
+  }
+  @include __media-query(sm) {
+    max-width: 100%;
+  }
+  @include __media-query(md) {
+    max-width: 100%;
+  }
+  @include __media-query(lg) {
+    max-width: 100%;
+  }
+  @include __media-query(xl) {
+    max-width: 1140px;
+  }
+  @include __media-query(xxl) {
+    max-width: 1320px;
+  }
+}
+
+@mixin __fluid-xxl {
+  @include __media-query(xs) {
+    max-width: 100%;
+  }
+  @include __media-query(sm) {
+    max-width: 100%;
+  }
+  @include __media-query(md) {
+    max-width: 100%;
+  }
+  @include __media-query(lg) {
+    max-width: 100%;
+  }
+  @include __media-query(xl) {
+    max-width: 100%;
+  }
+  @include __media-query(xxl) {
+    max-width: 1320px;
+  }
+}
+
+
+@mixin __responsive-col($smSpan:auto,$mdSpan:auto,$lgSpan:auto,$xlSpan:auto,$xxlSpan:auto) {
+  @content
+}
+
+@mixin __responsive-col-xs($span) {
+  @include __media-query(xs) {
+    grid-column-start: span $span;
+  }
+}
+
+@mixin __responsive-col-sm($span) {
+  @include __media-query(sm) {
+    grid-column-start: span $span;
+  }
+}
+
+@mixin __responsive-col-md($span) {
+  @include __media-query(md) {
+    grid-column-start: span $span;
+  }
+}
+
+@mixin __responsive-col-lg($span) {
+  @include __media-query(lg) {
+    grid-column-start: span $span;
+  }
+}
+
+@mixin __responsive-col-xl($span) {
+  @include __media-query(xl) {
+    grid-column-start: span $span;
+  }
+}
+
+@mixin __responsive-col-xxl($span) {
+  @include __media-query(xxl) {
+    grid-column-start: span $span;
+  }
+}
+
+
+// 内外阴影
+@mixin __box-emboss($opacity, $opacity2) {
+  box-shadow: __white($opacity) 0 1px 0, inset __black($opacity2) 0 1px 0;
+}
+
+@mixin __box-shadow($hor, $vert, $blur, $color) {
+  -webkit-box-shadow: $hor $vert $blur $color;
+  -moz-box-shadow: $hor $vert $blur $color;
+  -o-box-shadow: $hor $vert $blur $color;
+  box-shadow: $hor $vert $blur $color;
+}
+
+@mixin __border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -o-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -khtml-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// 清除浮动
+@mixin __clear-fix() {
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// 绝对定位
+@mixin __abs-pos($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}
+
+@mixin __line-height($heightValue: 12 ) {
+  line-height: (0.125 * $heightValue) + rem;
+}
+
+@mixin __font-size($size) {
+  font-size: __calculate-rem($size);
+}
+
+@mixin __key-frames($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin __animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@mixin __transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin __opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}

@@ -1,0 +1,26 @@
+@import "../../assets/styles/index";
+
+.bit-container {
+  @include fluid;
+  margin: 0 auto;
+  
+  &.bit-container-fluid-sm {
+    @include __fluid-sm;
+  }
+  
+  &.bit-container-fluid-md {
+    @include __fluid-md;
+  }
+  
+  &.bit-container-fluid-lg {
+    @include __fluid-lg;
+  }
+  
+  &.bit-container-fluid-xl {
+    @include __fluid-xl;
+  }
+  
+  &.bit-container-fluid-xxl {
+    @include __fluid-xxl;
+  }
+}

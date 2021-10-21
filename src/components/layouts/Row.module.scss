@@ -1,0 +1,78 @@
+@import "../../assets/styles/index";
+
+.bit-row {
+  &.bit-grid-row {
+    display: grid;
+    width: 100%;
+    @include test-show(#c1c1c1);
+    @each $cols in 12, 18, 24 {
+      &.bit-grid-row-#{$cols} {
+        grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
+        @for $gap from 0 through 1920 {
+          &.bit-grid-row-gutter-#{$gap} {
+            grid-column-gap: __calculate-rem($gap);
+          }
+        }
+        @for $col from 0 through $cols {
+          //bit-grid-col-span-responsive-sm-24__30oIX
+          .bit-grid-col-span-responsive-sm-#{$col} {
+            @include test-flex-center();
+            @include __media-query(sm) {
+              grid-column-start: span $col;
+            }
+          }
+          .bit-grid-col-span-responsive-md-#{$col} {
+            @include test-flex-center();
+            @include __media-query(md) {
+              grid-column-start: span $col;
+            }
+          }
+          .bit-grid-col-span-responsive-lg-#{$col} {
+            @include test-flex-center();
+            @include __media-query(lg) {
+              grid-column-start: span $col;
+            }
+          }
+          .bit-grid-col-span-responsive-xl-#{$col} {
+            @include test-flex-center();
+            @include __media-query(xl) {
+              grid-column-start: span $col;
+            }
+          }
+          .bit-grid-col-span-responsive-xxl-#{$col} {
+            @include test-flex-center();
+            @include __media-query(xxl) {
+              grid-column-start: span $col;
+            }
+          }
+        }
+        @for $col from 0 through $cols {
+          .bit-grid-col-span-#{$col} {
+            grid-column-start: span $col;
+            @include test-flex-center();
+            //@each $bp in sm, md, lg, xl, xxl {
+            //  &.bit-col-span-responsive-#{$bp}-#{$col} {
+            //    @if ($bp==sm) {
+            //      @include __responsive-col-sm($col);
+            //    } @else if ($bp==md) {
+            //      @include __responsive-col-md($col);
+            //    } @else if ($bp==lg) {
+            //      @include __responsive-col-lg($col);
+            //    } @else if ($bp==xl) {
+            //      @include __responsive-col-xl($col);
+            //    } @else if ($bp==xxl) {
+            //      @include __responsive-col-xxl($col);
+            //    }
+            //  }
+            //}
+          }
+        }
+      }
+    }
+    
+    &.bit-grid-row-24 {
+      grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
+    }
+  }
+  
+}
