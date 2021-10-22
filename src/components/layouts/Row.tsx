@@ -3,8 +3,9 @@ import React, {
   ReactComponentElement,
 } from 'react';
 import styles from './Row.module.scss';
+import {IBitComponentProps} from '../../lib/ICompomentProps';
 
-export interface IRowProps extends PropsWithChildren<any> {
+export interface IRowProps extends IBitComponentProps<any> {
   cols?: 12 | 18 | 24,
   gutters?: number,
 }
@@ -42,7 +43,6 @@ const Row: React.FunctionComponent<IRowProps> = (props) => {
       return null;
     });
   };
-  console.log((cols || 24) % childCount === 0);
   if (cols) {
     return gutters ?
       <div className={[

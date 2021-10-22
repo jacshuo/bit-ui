@@ -1,8 +1,13 @@
 @import "variables";
 @import "colors";
-@import "mixins";
-@import "helper";
-@import "animations";
+@import "helper_functions";
+@import "layout_mixins";
+@import "typography_mixins";
+@import "display_mixins";
+@import "shape_mixins";
+@import "effect_mixins";
+@import "animations_mixins";
+@import "styled_mixins";
 
 html {
   //font-size: 62.5%;

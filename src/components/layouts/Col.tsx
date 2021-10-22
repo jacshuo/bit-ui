@@ -1,7 +1,8 @@
 import React, {PropsWithChildren} from 'react';
 import RowStyle from './Row.module.scss';
+import {IBitComponentProps} from '../../lib/ICompomentProps';
 
-export interface IColProps extends PropsWithChildren<any> {
+export interface IColProps extends IBitComponentProps<any> {
   span?: number | string;
   spanSM?: number;
   spanMD?: number;

@@ -1,0 +1,154 @@
+//:root {
+//  $bit-primary-color: #155E75;
+//  $bit-primary-color-hover: #06B6D4;
+//  $bit-primary-color-active: #0E7490;
+//  $bit-primary-color-outline: rgba(19, 78, 74, .2);
+//  $bit-primary-1: #f7fafa;
+//  $bit-primary-2: #e7eff1;
+//  $bit-primary-3: #d6e3e7;
+//  $bit-primary-4: #c3d6dc;
+//  $bit-primary-5: #afc8d0;
+//  $bit-primary-6: #98b8c2;
+//  $bit-primary-7: #7da6b3;
+//  $bit-primary-color-deprecated-1: #cdd3e2;
+//  $bit-primary-color-deprecated-2: #949fc0;
+//  $bit-primary-color-deprecated-3: #586b9d;
+//  $bit-primary-color-deprecated-4: #bcc4d8;
+//  $bit-primary-color-deprecated-5: rgba(35, 59, 125, 0.12);
+//  $bit-primary-color-active-deprecated-1: rgba(230, 247, 255, .3);
+//  $bit-primary-color-active-deprecated-2: #e7eff1;
+//  $bit-success-color: #217c36;
+//  $bit-success-color-hover: #61964d;
+//  $bit-success-color-active: #1d490d;
+//  $bit-success-color-outline: rgba(82, 196, 26, .2);
+//  $bit-success-color-deprecated-bg: #f7faf8;
+//  $bit-success-color-deprecated-border: #9bbc8e;
+//  $bit-error-color: #DC2626;
+//  $bit-error-color-hover: #F87171;
+//  $bit-error-color-active: #B91C1C;
+//  $bit-error-color-outline: rgba(153, 27, 27, .2);
+//  $bit-error-color-deprecated-bg: #FEF2F2;
+//  $bit-error-color-deprecated-border: #FECACA;
+//  $bit-warning-color: #F59E0B;
+//  $bit-warning-color-hover: #FBBF24;
+//  $bit-warning-color-active: #CA8A04;
+//  $bit-warning-color-outline: rgba(146, 64, 14, .2);
+//  $bit-warning-color-deprecated-bg: #FFFBEB;
+//  $bit-warning-color-deprecated-border: #FCD34D;
+//  $bit-info-color: #0369A1;
+//  $bit-info-color-deprecated-bg: #F0F9FF;
+//  $bit-info-color-deprecated-border: #BAE6FD;
+//}
+
+$bit-palette-common-gray-scale-1: #ffffff;
+$bit-palette-common-gray-scale-2: #fafafa;
+$bit-palette-common-gray-scale-3: #f5f5f5;
+$bit-palette-common-gray-scale-4: #f0f0f0;
+$bit-palette-common-gray-scale-5: #d9d9d9;
+$bit-palette-common-gray-scale-6: #bfbfbf;
+$bit-palette-common-gray-scale-7: #8c8c8c;
+$bit-palette-common-gray-scale-8: #595959;
+$bit-palette-common-gray-scale-9: #434343;
+$bit-palette-common-gray-scale-10: #262626;
+$bit-palette-common-gray-scale-11: #1f1f1f;
+$bit-palette-common-gray-scale-12: #141414;
+$bit-palette-common-gray-scale-13: #000000;
+
+$bit-palette-nature-primary: #3dd997;
+$bit-palette-nature-primary-1: #f0fff6;
+$bit-palette-nature-primary-2: #ebfff4;
+$bit-palette-nature-primary-3: #c2ffdf;
+$bit-palette-nature-primary-4: #91f2c3;
+$bit-palette-nature-primary-5: #65e6ac;
+$bit-palette-nature-primary-6: #3dd997;
+$bit-palette-nature-primary-7: #29b37e;
+$bit-palette-nature-primary-8: #198c64;
+$bit-palette-nature-primary-9: #0d664a;
+$bit-palette-nature-primary-10: #084030;
+
+$bit-palette-holly-primary: #30c2e8;
+$bit-palette-holly-primary-1: #f0feff;
+$bit-palette-holly-primary-2: #d9fcff;
+$bit-palette-holly-primary-3: #b0f7ff;
+$bit-palette-holly-primary-4: #87efff;
+$bit-palette-holly-primary-5: #5bdbf5;
+$bit-palette-holly-primary-6: #30c2e8;
+$bit-palette-holly-primary-7: #1f9cc2;
+$bit-palette-holly-primary-8: #11779c;
+$bit-palette-holly-primary-9: #075475;
+$bit-palette-holly-primary-10: #04364f;
+
+$bit-palette-nightly-primary: #00ba9c;
+$bit-palette-nightly-primary-1: #002120;
+$bit-palette-nightly-primary-2: #004743;
+$bit-palette-nightly-primary-3: #006e63;
+$bit-palette-nightly-primary-4: #009480;
+$bit-palette-nightly-primary-5: #00ba9c;
+$bit-palette-nightly-primary-6: #20c7a5;
+$bit-palette-nightly-primary-7: #44d4b2;
+$bit-palette-nightly-primary-8: #6ce0c1;
+$bit-palette-nightly-primary-9: #98edd4;
+$bit-palette-nightly-primary-10: #e1faf2;
+
+
+$bit-functional-palette-success-primary: #68dc35;
+$bit-functional-palette-success-primary-1: #f7fff0;
+$bit-functional-palette-success-primary-2: #eeffe0;
+$bit-functional-palette-success-primary-3: #d4ffb8;
+$bit-functional-palette-success-primary-4: #b1f589;
+$bit-functional-palette-success-primary-5: #8be85d;
+$bit-functional-palette-success-primary-6: #68dc35;
+$bit-functional-palette-success-primary-7: #4ab522;
+$bit-functional-palette-success-primary-8: #318f14;
+$bit-functional-palette-success-primary-9: #1c6909;
+$bit-functional-palette-success-primary-10: #0f4205;
+
+$bit-functional-palette-danger-primary: #dc1d1d;
+$bit-functional-palette-danger-primary-1: #fff0ed;
+$bit-functional-palette-danger-primary-2: #ffccc4;
+$bit-functional-palette-danger-primary-3: #ffa59c;
+$bit-functional-palette-danger-primary-4: #f5776e;
+$bit-functional-palette-danger-primary-5: #e84943;
+$bit-functional-palette-danger-primary-6: #dc1d1d;
+$bit-functional-palette-danger-primary-7: #b50e14;
+$bit-functional-palette-danger-primary-8: #8f040e;
+$bit-functional-palette-danger-primary-9: #69000a;
+$bit-functional-palette-danger-primary-10: #420009;
+
+$bit-functional-palette-warn-primary: #febf11;
+$bit-functional-palette-warn-primary-1: #fffce6;
+$bit-functional-palette-warn-primary-2: #fff5b5;
+$bit-functional-palette-warn-primary-3: #ffec8c;
+$bit-functional-palette-warn-primary-4: #ffe063;
+$bit-functional-palette-warn-primary-5: #ffd13b;
+$bit-functional-palette-warn-primary-6: #febf11;
+$bit-functional-palette-warn-primary-7: #d99904;
+$bit-functional-palette-warn-primary-8: #b37700;
+$bit-functional-palette-warn-primary-9: #8c5900;
+$bit-functional-palette-warn-primary-10: #663d00;
+
+
+/*
+JUST FOR BitUI DEMO.
+*/
+$bit-palette-helper-accent: $bit-palette-nightly-primary;
+$bit-palette-helper-accent-light-1: $bit-palette-nightly-primary-10;
+$bit-palette-helper-accent-light-2: $bit-palette-nightly-primary-9;
+$bit-palette-helper-accent-light-3: $bit-palette-nightly-primary-8;
+$bit-palette-helper-accent-light-4: $bit-palette-nightly-primary-7;
+$bit-palette-helper-accent-dark-1: $bit-palette-nightly-primary-4;
+$bit-palette-helper-accent-dark-2: $bit-palette-nightly-primary-3;
+$bit-palette-helper-accent-dark-3: $bit-palette-nightly-primary-2;
+$bit-palette-helper-accent-dark-4: $bit-palette-nightly-primary-1;
+// ---- 公共颜色
+$bit-palette-helper-red: $bit-functional-palette-danger-primary-6;
+$bit-palette-helper-yellow: $bit-functional-palette-warn-primary-6;
+$bit-palette-helper-success: $bit-functional-palette-success-primary-6;
+$bit-palette-helper-bg-light: $bit-palette-common-gray-scale-4;
+$bit-palette-helper-bg-dark: $bit-palette-common-gray-scale-9;
+$bit-palette-helper-font-light-1: $bit-palette-common-gray-scale-1;
+$bit-palette-helper-font-light-2: $bit-palette-common-gray-scale-3;
+$bit-palette-helper-font-light-3: $bit-palette-common-gray-scale-4;
+$bit-palette-helper-font-dark-1: $bit-palette-common-gray-scale-6;
+$bit-palette-helper-font-dark-2: $bit-palette-common-gray-scale-8;
+$bit-palette-helper-font-dark-3: $bit-palette-common-gray-scale-10;

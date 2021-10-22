@@ -1,0 +1,28 @@
+@import "helper_functions";
+
+@mixin __opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// 内外阴影
+@mixin __box-emboss($opacity, $opacity2) {
+  box-shadow: __opa_white($opacity) 0 1px 0, inset __opa_black($opacity2) 0 1px 0;
+}
+
+@mixin __box-shadow($hor, $vert, $blur, $color) {
+  -webkit-box-shadow: $hor $vert $blur $color;
+  -moz-box-shadow: $hor $vert $blur $color;
+  -o-box-shadow: $hor $vert $blur $color;
+  box-shadow: $hor $vert $blur $color;
+}
+
+@mixin __border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -o-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -khtml-border-radius: $radius;
+  border-radius: $radius;
+}

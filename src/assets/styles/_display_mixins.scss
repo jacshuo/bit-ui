@@ -1,0 +1,14 @@
+@import "colors";
+@import "helper_functions";
+
+@mixin __display_flex_with_background($color: $bit-palette-helper-font-light-3,$bgColor:$bit-palette-helper-accent-dark-1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: __calculate-rem(40);
+  width: 100%;
+  background-color: $bgColor;
+  color: $color;
+  font-size: __font-size(16);
+}
+

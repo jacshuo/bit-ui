@@ -1,9 +1,10 @@
-@import 'helper';
-
+@import 'helper_functions';
+// 流布局
 @mixin fluid {
   width: 100%;
 }
 
+// 媒体查询
 @mixin __media-query($point) {
   @if ($point==xs) {
     // Xtra small devices
@@ -38,9 +39,7 @@
   }
 }
 
-/*
-Container
-*/
+// 容器
 @mixin __fluid-sm {
   @include __media-query(xs) {
     max-width: 100%;
@@ -146,11 +145,6 @@ Container
   }
 }
 
-
-@mixin __responsive-col($smSpan:auto,$mdSpan:auto,$lgSpan:auto,$xlSpan:auto,$xxlSpan:auto) {
-  @content
-}
-
 @mixin __responsive-col-xs($span) {
   @include __media-query(xs) {
     grid-column-start: span $span;
@@ -187,28 +181,6 @@ Container
   }
 }
 
-
-// 内外阴影
-@mixin __box-emboss($opacity, $opacity2) {
-  box-shadow: __white($opacity) 0 1px 0, inset __black($opacity2) 0 1px 0;
-}
-
-@mixin __box-shadow($hor, $vert, $blur, $color) {
-  -webkit-box-shadow: $hor $vert $blur $color;
-  -moz-box-shadow: $hor $vert $blur $color;
-  -o-box-shadow: $hor $vert $blur $color;
-  box-shadow: $hor $vert $blur $color;
-}
-
-@mixin __border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -o-border-radius: $radius;
-  -ms-border-radius: $radius;
-  -khtml-border-radius: $radius;
-  border-radius: $radius;
-}
-
 // 清除浮动
 @mixin __clear-fix() {
   &:before, &:after {
@@ -221,7 +193,7 @@ Container
 }
 
 // 绝对定位
-@mixin __abs-pos($top: auto, $right: auto, $bottom: auto, $left: auto) {
+@mixin __abs-position($top: auto, $right: auto, $bottom: auto, $left: auto) {
   top: $top;
   right: $right;
   bottom: $bottom;
@@ -229,50 +201,14 @@ Container
   position: absolute;
 }
 
-@mixin __line-height($heightValue: 12 ) {
-  line-height: (0.125 * $heightValue) + rem;
-}
-
-@mixin __font-size($size) {
-  font-size: __calculate-rem($size);
-}
-
-@mixin __key-frames($animation-name) {
-  @-webkit-keyframes #{$animation-name} {
-    @content;
-  }
-  @-moz-keyframes #{$animation-name} {
-    @content;
-  }
-  @-ms-keyframes #{$animation-name} {
-    @content;
-  }
-  @-o-keyframes #{$animation-name} {
-    @content;
-  }
-  @keyframes #{$animation-name} {
-    @content;
+// 垂直居中
+@mixin __ghost-vertical-align() {
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: .1px;
   }
 }
 
-@mixin __animation($str) {
-  -webkit-animation: #{$str};
-  -moz-animation: #{$str};
-  -ms-animation: #{$str};
-  -o-animation: #{$str};
-  animation: #{$str};
-}
-
-@mixin __transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
-}
-
-@mixin __opacity($opacity) {
-  opacity: $opacity;
-  $opacity-ie: $opacity * 100;
-  filter: alpha(opacity=$opacity-ie); //IE8
-}

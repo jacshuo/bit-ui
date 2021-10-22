@@ -1,15 +1,26 @@
 import React from 'react';
-import Container from '../components/layouts/Container';
-import Row from '../components/layouts/Row';
-import Col from '../components/layouts/Col';
+import BasicLayout from '../components/layouts/BasicLayout';
+import Header from '../components/layouts/Header';
+import Main from '../components/layouts/Main';
+import Sider from '../components/layouts/Sider';
+import Footer from '../components/layouts/Footer';
 
 const Home: React.FunctionComponent<any> = () => {
   return <>
-    <Container>
-      <Row cols={12} gutters={5}>
-      </Row>
-      <div>I am not a row.</div>
-    </Container>
+    <BasicLayout>
+      <Header>
+        HEADER
+      </Header>
+      <Main>
+        MAIN
+      </Main>
+      <Sider>
+        SIDER
+      </Sider>
+      <Footer>
+        FOOTER
+      </Footer>
+    </BasicLayout>
   </>;
 };
 

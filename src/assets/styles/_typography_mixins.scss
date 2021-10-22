@@ -1,0 +1,10 @@
+@mixin __line-height($heightValue: 12 ) {
+  line-height: (0.125 * $heightValue) + rem;
+}
+
+@mixin __truncate-text($overflow: ellipsis) {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: $overflow; // values are: clip, ellipsis, or a string
+}
+
