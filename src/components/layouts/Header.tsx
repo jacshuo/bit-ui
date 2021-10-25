@@ -6,9 +6,9 @@ export interface IHeader extends IBitComponentProps<any> {
 }
 
 const Header: FunctionComponent = (props: IHeader) => {
-  const {children} = props;
+  const {children, style} = props;
   return <>
-    <div>
+    <div className={headerStyle['bit-header']} style={style}>
       {children}
     </div>
   </>;

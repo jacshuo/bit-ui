@@ -1,0 +1,28 @@
+@import "../../assets/styles/index";
+
+// h-m-f is short for header main footer
+// h-m-s-f is short for header main sider footer
+
+.bit-basic-layout {
+  
+  &.bit-basic-layout-h-m-f {
+    display: grid;
+    grid-template:
+    'header'
+    'main'
+    'footer';
+    grid-template-rows: $bit-general-header-height calc(100vh - #{__calcMainHeight($bit-general-header-height, $bit-general-footer-height)}) $bit-general-footer-height;
+    grid-auto-rows: max-content;
+  }
+  
+  &.bit-basic-layout-h-m-s-f {
+    display: grid;
+    grid-template:
+    'header header'
+    'sider main'
+    'footer footer';
+    grid-template-columns: $bit-general-sider-width 1fr;
+    grid-template-rows: $bit-general-header-height calc(100vh - #{__calcMainHeight($bit-general-header-height, $bit-general-footer-height)}) $bit-general-footer-height;
+  }
+  
+}

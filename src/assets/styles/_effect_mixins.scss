@@ -11,11 +11,11 @@
   box-shadow: __opa_white($opacity) 0 1px 0, inset __opa_black($opacity2) 0 1px 0;
 }
 
-@mixin __box-shadow($hor, $vert, $blur, $color) {
-  -webkit-box-shadow: $hor $vert $blur $color;
-  -moz-box-shadow: $hor $vert $blur $color;
-  -o-box-shadow: $hor $vert $blur $color;
-  box-shadow: $hor $vert $blur $color;
+@mixin __box-shadow($hor, $vert, $blur,$spread, $color) {
+  -webkit-box-shadow: $hor $vert $blur $spread, $color;
+  -moz-box-shadow: $hor $vert $blur $spread, $color;
+  -o-box-shadow: $hor $vert $blur $spread $color;
+  box-shadow: $hor $vert $blur $spread $color;
 }
 
 @mixin __border-radius($radius) {

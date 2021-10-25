@@ -17,6 +17,11 @@
   @return rgba(255, 255, 255, $opacity)
 }
 
+@function __calcMainHeight($header,$footer) {
+  @return $header + $footer;
+}
+
+
 %visually-hidden {
   margin: -1px;
   padding: 0;

@@ -16,8 +16,10 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: $bit-palette-theme-bg-dark;
 }
 
 * {
   box-sizing: border-box;
+  color: $bit-palette-theme-font-light-1;
 }

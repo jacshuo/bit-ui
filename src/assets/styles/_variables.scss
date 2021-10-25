@@ -1,5 +1,48 @@
-@mixin __bg-color($type) {
-  @if ($type=="primary") {
-  
-  }
-}
+@import "helper_functions";
+@import "layout_mixins";
+@import "colors";
+
+$bit-general-box-content-padding-x: __calculate_rem(15);
+$bit-general-box-content-padding-y: __calculate_rem(5);
+$bit-general-box-radius-sm: __calculate_rem(5);
+$bit-general-box-radius-md: __calculate_rem(7);
+$bit-general-box-radius-lg: __calculate_rem(10);
+$bit-general-box-border-width-light: __calculate-rem(0.1);
+$bit-general-box-border-width-heavy: __calculate-rem(0.15);
+
+$bit-general-header-height: 60px;
+$bit-general-header-padding-x: $bit-general-box-content-padding-x;
+$bit-general-header-padding-y: $bit-general-box-content-padding-y;
+$bit-general-sider-width: __calculate-rem(220);
+$bit-general-sider-percent-width: 15%;
+$bit-general-footer-height: 40px;
+$bit-general-sizing-modal-width-sm: __calculate_rem(300);
+$bit-general-sizing-modal-width-md: __calculate-rem(360);
+$bit-general-sizing-modal-width-lg: __calculate-rem(420);
+$bit-general-sizing-inputs-height-sm: __calculate_rem(12);
+$bit-general-sizing-inputs-height-md: __calculate_rem(14);
+$bit-general-sizing-inputs-height-lg: __calculate_rem(16);
+
+
+// colors
+$bit-palette-theme-accent: $bit-palette-nightly-primary;
+$bit-palette-theme-accent-light-1: $bit-palette-nightly-primary-10;
+$bit-palette-theme-accent-light-2: $bit-palette-nightly-primary-9;
+$bit-palette-theme-accent-light-3: $bit-palette-nightly-primary-8;
+$bit-palette-theme-accent-light-4: $bit-palette-nightly-primary-7;
+$bit-palette-theme-accent-dark-1: $bit-palette-nightly-primary-4;
+$bit-palette-theme-accent-dark-2: $bit-palette-nightly-primary-3;
+$bit-palette-theme-accent-dark-3: $bit-palette-nightly-primary-2;
+$bit-palette-theme-accent-dark-4: $bit-palette-nightly-primary-1;
+// ---- 公共颜色
+$bit-palette-theme-red: $bit-functional-palette-danger-primary-6;
+$bit-palette-theme-yellow: $bit-functional-palette-warn-primary-6;
+$bit-palette-theme-success: $bit-functional-palette-success-primary-6;
+$bit-palette-theme-bg-light: $bit-palette-theme-accent-light-1;
+$bit-palette-theme-bg-dark: $bit-palette-theme-accent-dark-4;
+$bit-palette-theme-font-light-1: $bit-palette-common-gray-scale-1;
+$bit-palette-theme-font-light-2: $bit-palette-common-gray-scale-3;
+$bit-palette-theme-font-light-3: $bit-palette-common-gray-scale-4;
+$bit-palette-theme-font-dark-1: $bit-palette-common-gray-scale-6;
+$bit-palette-theme-font-dark-2: $bit-palette-common-gray-scale-8;
+$bit-palette-theme-font-dark-3: $bit-palette-common-gray-scale-10;

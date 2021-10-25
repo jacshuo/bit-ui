@@ -1,5 +1,4 @@
 import React, {
-  PropsWithChildren,
   ReactComponentElement,
 } from 'react';
 import styles from './Row.module.scss';

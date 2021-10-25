@@ -1,5 +1,7 @@
 @import "../../assets/styles/index";
 
 .bit-header {
-
+  @include __header();
+  @include __box-shadow(__calculate-rem(0), __calculate-rem(0), __calculate-rem(10), __calculate-rem(0), $bit-palette-theme-accent-dark-4)
+  //@include __border_plain($bit-functional-palette-danger-primary-5, solid)
 }

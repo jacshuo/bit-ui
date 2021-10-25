@@ -1,2 +1,54 @@
 @import "colors";
+@import "variables";
 
+@mixin __header() {
+  @include fluid();
+  display: flex;
+  grid-area: header;
+  align-items: center;
+  height: $bit-general-header-height;
+  padding: $bit-general-header-padding-y $bit-general-header-padding-x;
+  color: $bit-palette-theme-font-light-3;
+  background-color: $bit-palette-theme-accent-dark-3;
+}
+
+@mixin __border_plain($borderColor, $style:solid, $weight:light) {
+  @if ($weight==light) {
+    border: $style $bit-general-box-border-width-light $borderColor;
+  } @else {
+    border: $style $bit-general-box-border-width-heavy $borderColor;
+  }
+}
+
+@mixin __border_radius($size:md) {
+  @if ($size==sm) {
+    border-radius: $bit-general-box-radius-sm;
+  } @else if ($size==md) {
+    border-radius: $bit-general-box-radius-md;
+  } @else if ($size==lg) {
+    border-radius: $bit-general-box-radius-lg;
+  }
+  
+}
+
+@mixin __modal_sizing($size:md,$height:auto) {
+  @if ($size==sm) {
+    width: $bit-general-sizing-modal-width-sm;
+  } @else if ($size==md) {
+    width: $bit-general-sizing-modal-width-md;
+  } @else if ($size==lg) {
+    width: $bit-general-sizing-modal-width-lg;
+  }
+  height: $height;
+}
+
+@mixin __inputs_sizing($size:md,$width:100%) {
+  width: $width;
+  @if ($size==sm) {
+    height: $bit-general-sizing-inputs-height-sm;
+  } @else if ($size==md) {
+    height: $bit-general-sizing-inputs-height-md;
+  } @else if ($size==lg) {
+    height: $bit-general-sizing-inputs-height-lg;
+  }
+}

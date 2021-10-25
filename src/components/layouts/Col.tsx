@@ -1,5 +1,5 @@
-import React, {PropsWithChildren} from 'react';
-import RowStyle from './Row.module.scss';
+import React from 'react';
+import rowStyle from './Row.module.scss';
 import {IBitComponentProps} from '../../lib/ICompomentProps';
 
 export interface IColProps extends IBitComponentProps<any> {
@@ -21,22 +21,48 @@ const Col: React.FunctionComponent<IColProps> = (props) => {
     spanXXL,
     children,
     style,
+    flex,
+    flexJustifyContent,
+    flexAlignItems,
+    flexJustifyItems,
+    flexAlignContent,
   } = props;
-  console.log(props);
   if (span === 'responsive') {
     return <div className={[
-      spanSM ? RowStyle[`bit-grid-col-span-responsive-sm-${spanSM}`] : null,
-      spanMD ? RowStyle[`bit-grid-col-span-responsive-md-${spanMD}`] : null,
-      spanLG ? RowStyle[`bit-grid-col-span-responsive-lg-${spanLG}`] : null,
-      spanXL ? RowStyle[`bit-grid-col-span-responsive-xl-${spanXL}`] : null,
-      spanXXL ? RowStyle[`bit-grid-col-span-responsive-xxl-${spanXXL}`] : null,
+      spanSM ? rowStyle[`bit-grid-col-span-responsive-sm-${spanSM}`] : null,
+      spanMD ? rowStyle[`bit-grid-col-span-responsive-md-${spanMD}`] : null,
+      spanLG ? rowStyle[`bit-grid-col-span-responsive-lg-${spanLG}`] : null,
+      spanXL ? rowStyle[`bit-grid-col-span-responsive-xl-${spanXL}`] : null,
+      spanXXL ? rowStyle[`bit-grid-col-span-responsive-xxl-${spanXXL}`] : null,
+      flex ? rowStyle[`bit-grid-col-flex`] : '',
+      flexJustifyContent ?
+        rowStyle[`bit-grid-col-flex-justify-content-${flexJustifyContent}`] :
+        '',
+      flexAlignItems ?
+        rowStyle[`bit-grid-col-flex-align-items-${flexAlignItems}`] :
+        '',
+      flexJustifyItems ?
+        rowStyle[`bit-grid-col-flex-justify-items-${flexJustifyItems}`] : '',
+      flexAlignContent ?
+        rowStyle[`bit-grid-col-flex-align-content-${flexAlignContent}`] : '',
     ].join(' ')} style={style}>
       {children}
     </div>;
   }
   if (span) {
     return <div className={[
-      RowStyle[`bit-grid-col-span-${span}`],
+      rowStyle[`bit-grid-col-span-${span}`],
+      flex ? rowStyle[`bit-grid-col-flex`] : '',
+      flexJustifyContent ?
+        rowStyle[`bit-grid-col-flex-justify-content-${flexJustifyContent}`] :
+        '',
+      flexAlignItems ?
+        rowStyle[`bit-grid-col-flex-align-items-${flexAlignItems}`] :
+        '',
+      flexJustifyItems ?
+        rowStyle[`bit-grid-col-flex-justify-items-${flexJustifyItems}`] : '',
+      flexAlignContent ?
+        rowStyle[`bit-grid-col-flex-align-content-${flexAlignContent}`] : '',
     ].join(' ')} style={style}>
       {children}
     </div>;

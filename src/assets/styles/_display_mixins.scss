@@ -1,7 +1,8 @@
 @import "colors";
 @import "helper_functions";
+@import "variables";
 
-@mixin __display_flex_with_background($color: $bit-palette-helper-font-light-3,$bgColor:$bit-palette-helper-accent-dark-1) {
+@mixin __demo_display_flex_with_background($color: $bit-palette-theme-font-light-3,$bgColor:$bit-palette-theme-accent-dark-1) {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,3 +13,14 @@
   font-size: __font-size(16);
 }
 
+@mixin __demo_flex_justified_aligned_center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin __flex_justified_aligned($justify,$align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}

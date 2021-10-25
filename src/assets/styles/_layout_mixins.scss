@@ -212,3 +212,10 @@
   }
 }
 
+// sizing
+@mixin __sizing($width,$height) {
+  box-sizing: border-box;
+  width: __calculate-rem($width);
+  height: __calculate-rem($height);
+}
+
