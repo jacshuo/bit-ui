@@ -2,9 +2,9 @@ import React, {
   ReactComponentElement,
 } from 'react';
 import styles from './Row.module.scss';
-import {IBitComponentProps} from '../../lib/ICompomentProps';
+import {IBitLayoutComponentProps} from './ILayoutCompomentProps';
 
-export interface IRowProps extends IBitComponentProps<any> {
+export interface IRowProps extends IBitLayoutComponentProps<any> {
   cols?: 12 | 18 | 24,
   gutters?: number,
 }

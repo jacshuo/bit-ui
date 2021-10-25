@@ -1,0 +1,33 @@
+@import "../../assets/styles/index";
+
+.bit-input {
+  @include __transition(all 0.2s cubic-bezier(.17, .67, .86, .47));
+  background-color: $bit-palette-theme-inputs-bg-dark;
+  height: __calculate-rem(28);
+  border-radius: $bit-general-box-radius-sm;
+  
+  &.bit-input-small {
+    height: __calculate-rem(24)
+  }
+  
+  &.bit-input-large {
+    height: __calculate-rem(32)
+  }
+  
+  &:hover {
+    box-shadow: 0 0 __calculate_rem(1) __calculate_rem(1.5) $bit-palette-theme-inputs-border-light;
+  }
+  
+  input {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: $bit-general-box-radius-sm;
+    
+    &:focus {
+      background-color: $bit-palette-theme-inputs-bg-light;
+    }
+  }
+}

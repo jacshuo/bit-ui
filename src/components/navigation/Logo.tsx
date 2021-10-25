@@ -1,5 +1,5 @@
 import React, {FunctionComponent} from 'react';
-import {IBitComponentProps} from '../../lib/ICompomentProps';
+import {IBitLayoutComponentProps} from '../layouts/ILayoutCompomentProps';
 
 
 export interface ILogoSize {
@@ -7,7 +7,7 @@ export interface ILogoSize {
   height: number;
 }
 
-export interface ILogoProps extends IBitComponentProps<any> {
+export interface ILogoProps extends IBitLayoutComponentProps<any> {
   media?: string,
   size?: ILogoSize,
 }

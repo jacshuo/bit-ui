@@ -1,8 +1,8 @@
 import React from 'react';
 import bslStyles from './BasicLayout.module.scss';
-import {IBitComponentProps} from '../../lib/ICompomentProps';
+import {IBitLayoutComponentProps} from './ILayoutCompomentProps';
 
-export interface IBasicLayout extends IBitComponentProps<any> {
+export interface IBasicLayout extends IBitLayoutComponentProps<any> {
 
 }
 

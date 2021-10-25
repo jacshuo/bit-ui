@@ -5,10 +5,11 @@ import Main from '../components/layouts/Main';
 import Sider from '../components/layouts/Sider';
 import Footer from '../components/layouts/Footer';
 import Logo from '../components/navigation/Logo';
-import logoImg from '../assets/images/icon-logo-main.png';
+import logoImg from '../assets/images/icon-logo-main-white.png';
 import Container from '../components/layouts/Container';
 import Row from '../components/layouts/Row';
 import Col from '../components/layouts/Col';
+import Input from '../components/inputs/Input';
 
 const Home: React.FunctionComponent<any> = () => {
   return <>
@@ -24,19 +25,25 @@ const Home: React.FunctionComponent<any> = () => {
             <Col spanSM={3} spanLG={4} spanXL={7}
               flexJustifyContent="flex-start"
               flexAlignItems="center">
-              Menu
+              NavBar Component
             </Col>
             <Col spanSM={3} spanLG={4} spanXL={2}
               flexJustifyContent="flex-end"
               flexAlignItems="center">
-              Login
+              LoginInfo Component
             </Col>
           </Row>
         </Container>
       </Header>
       <Sider>Sider</Sider>
       <Main>
-        MAIN
+        <Container fluid>
+          <Row>
+            <Col span={3}>
+              <Input />
+            </Col>
+          </Row>
+        </Container>
       </Main>
       <Footer>
         FOOTER

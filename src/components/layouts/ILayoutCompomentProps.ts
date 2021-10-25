@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface IBitComponentProps<T> extends React.PropsWithChildren<any> {
+export interface IBitLayoutComponentProps<T> extends React.PropsWithChildren<any> {
   theme?: 'dark' | 'light',
-  render?: (props?: IBitComponentProps<any>) => React.ReactNode
+  render?: (props?: IBitLayoutComponentProps<any>) => React.ReactNode
   flex?: boolean,
   flexJustifyContent?: 'center' | 'flex-start' | 'flex-end',
   flexAlignItems?: 'center' | 'flex-start' | 'flex-end',

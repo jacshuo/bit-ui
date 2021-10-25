@@ -1,8 +1,8 @@
 import React from 'react';
 import rowStyle from './Row.module.scss';
-import {IBitComponentProps} from '../../lib/ICompomentProps';
+import {IBitLayoutComponentProps} from './ILayoutCompomentProps';
 
-export interface IColProps extends IBitComponentProps<any> {
+export interface IColProps extends IBitLayoutComponentProps<any> {
   span?: number | string;
   spanSM?: number;
   spanMD?: number;

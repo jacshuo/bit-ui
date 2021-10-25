@@ -1,8 +1,8 @@
 import React, {FunctionComponent} from 'react';
 import footerStyles from './Footer.module.scss';
-import {IBitComponentProps} from '../../lib/ICompomentProps';
+import {IBitLayoutComponentProps} from './ILayoutCompomentProps';
 
-export interface IReact extends IBitComponentProps<any> {
+export interface IReact extends IBitLayoutComponentProps<any> {
 
 }
 

@@ -9,7 +9,7 @@
   height: $bit-general-header-height;
   padding: $bit-general-header-padding-y $bit-general-header-padding-x;
   color: $bit-palette-theme-font-light-3;
-  background-color: $bit-palette-theme-accent-dark-3;
+  background-color: $bit-palette-theme-accent-dark-2;
 }
 
 @mixin __border_plain($borderColor, $style:solid, $weight:light) {

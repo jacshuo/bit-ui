@@ -1,8 +1,8 @@
 import React, {FunctionComponent} from 'react';
 import headerStyle from './Header.module.scss';
-import {IBitComponentProps} from '../../lib/ICompomentProps';
+import {IBitLayoutComponentProps} from './ILayoutCompomentProps';
 
-export interface IHeader extends IBitComponentProps<any> {
+export interface IHeader extends IBitLayoutComponentProps<any> {
 }
 
 const Header: FunctionComponent = (props: IHeader) => {

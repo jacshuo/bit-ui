@@ -1,7 +1,7 @@
 import React, {FunctionComponent} from 'react';
-import {IBitComponentProps} from '../../lib/ICompomentProps';
+import {IBitLayoutComponentProps} from './ILayoutCompomentProps';
 
-export interface ISiderProps extends IBitComponentProps<any> {
+export interface ISiderProps extends IBitLayoutComponentProps<any> {
 
 }
 
