@@ -13,13 +13,23 @@ html {
   //font-size: 62.5%;
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("https://sf6-cdn-tos.douyinstatic.com/obj/eden-cn/slepweh7nupqpognuhbo/Inter-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("https://sf6-cdn-tos.douyinstatic.com/obj/eden-cn/slepweh7nupqpognuhbo/Inter-Bold.ttf") format("ttf");
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: $bit-palette-theme-bg-dark;
+  background-color: $bit-theme-light-bg-0;
 }
 
 * {
   box-sizing: border-box;
-  color: $bit-palette-theme-font-light-1;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

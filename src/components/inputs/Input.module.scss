@@ -1,33 +1,163 @@
 @import "../../assets/styles/index";
 
 .bit-input {
-  @include __transition(all 0.2s cubic-bezier(.17, .67, .86, .47));
-  background-color: $bit-palette-theme-inputs-bg-dark;
-  height: __calculate-rem(28);
-  border-radius: $bit-general-box-radius-sm;
-  
-  &.bit-input-small {
-    height: __calculate-rem(24)
-  }
-  
-  &.bit-input-large {
-    height: __calculate-rem(32)
-  }
-  
-  &:hover {
-    box-shadow: 0 0 __calculate_rem(1) __calculate_rem(1.5) $bit-palette-theme-inputs-border-light;
-  }
+  width: 100%;
+  @include __transition(all 0.15s ease-in-out);
+  height: $bit-general-control-default;
+  position: relative;
+  border: solid $bit-general-control-border-thickness $bit-theme-light-primary-light-default;
   
   input {
+    margin: 0;
+    padding: 0 __calculate_rem(5);
     outline: none;
     border: none;
     width: 100%;
     height: 100%;
     background-color: transparent;
-    border-radius: $bit-general-box-radius-sm;
+    color: $bit-theme-light-text-0;
+    font-size: $bit-general-font-size-regular;
     
     &:focus {
-      background-color: $bit-palette-theme-inputs-bg-light;
+      background-color: $bit-theme-light-fill-1;
     }
   }
+  
+  &:hover {
+    @include __control-hover-shadow();
+  }
+  
+  &.danger {
+    border: solid $bit-general-control-border-thickness $bit-theme-light-danger;
+    
+    &:hover {
+      @include __control-hover-danger-shadow();
+    }
+  }
+  
+  &.warn {
+    border: solid $bit-general-control-border-thickness $bit-theme-light-warn;
+    
+    &:hover {
+      @include __control-hover-warn-shadow();
+    }
+  }
+  
+  &.success {
+    border: solid $bit-general-control-border-thickness $bit-theme-light-success;
+    
+    &:hover {
+      @include __control-hover-success-shadow();
+    }
+  }
+  
+  &.bit-input-small {
+    height: $bit-general-control-small;
+    font-size: $bit-general-font-size-regular;
+  }
+  
+  &.bit-input-large {
+    height: $bit-general-control-large;
+    font-size: $bit-general-font-size-regular;
+  }
+  
+  &.bit-input-with-prefix {
+    padding-left: $bit-general-input-prefix-width;
+    
+    .bit-input-prefix {
+      width: $bit-general-input-prefix-width;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $bit-theme-light-bg-1;
+      font-size: $bit-general-font-size-regular;
+      font-weight: bold;
+      color: $bit-theme-light-text-2;
+      box-shadow: __calculate_rem(0.2) 0 __calculate_rem(2) 0 $bit-theme-light-shadow;
+    }
+  }
+  
+  &.bit-input-with-suffix {
+    padding-right: $bit-general-input-suffix-width;
+    
+    .bit-input-suffix {
+      width: $bit-general-input-suffix-width;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $bit-theme-light-bg-1;
+      font-size: $bit-general-font-size-regular;
+      font-weight: bold;
+      color: $bit-theme-light-text-2;
+      box-shadow: __calculate_rem(-0.2) 0 __calculate_rem(2) 0 $bit-theme-light-shadow;
+    }
+  }
+  
+  .clear-icon {
+  
+  }
+  
+  &.rounded {
+    border-radius: $bit-general-border-radius-medium;
+    
+    input {
+      border-radius: $bit-general-border-radius-medium;
+    }
+    
+    .bit-input-prefix {
+      border-top-left-radius: $bit-general-border-radius-medium;
+      border-bottom-left-radius: $bit-general-border-radius-medium;
+      
+      + input {
+        border-radius: 0
+      }
+    }
+    
+    .bit-input-suffix {
+      border-top-right-radius: $bit-general-border-radius-medium;
+      border-bottom-right-radius: $bit-general-border-radius-medium;
+      
+      + input {
+        border-radius: 0
+      }
+    }
+    
+  }
+  
+  &.disabled {
+    border-color: $bit-theme-light-disabled-border;
+    
+    &:hover {
+      box-shadow: none;
+    }
+    
+    input {
+      cursor: not-allowed;
+      background-color: $bit-theme-light-disabled-fill;
+      color: $bit-theme-light-disabled-text;
+    }
+  }
+  
+  &.readonly {
+    border-color: $bit-theme-light-disabled-border;
+    
+    &:hover {
+      box-shadow: none;
+    }
+    
+    input {
+      cursor: not-allowed;
+      background-color: $bit-theme-light-disabled-fill;
+      color: $bit-theme-light-text-0;;
+    }
+  }
+  
 }

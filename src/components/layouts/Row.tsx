@@ -2,6 +2,7 @@ import React, {
   ReactComponentElement,
 } from 'react';
 import styles from './Row.module.scss';
+import classNames from 'classnames/bind';
 import {IBitLayoutComponentProps} from './ILayoutCompomentProps';
 
 export interface IRowProps extends IBitLayoutComponentProps<any> {
@@ -17,6 +18,7 @@ const Row: React.FunctionComponent<IRowProps> = (props) => {
     style,
   } = props;
   const childCount = React.Children.count(children);
+  const cls = classNames.bind(styles);
   const renderChild = (columns: number) => {
     return React.Children.map(children, (child) => {
       if (child && childCount) {
@@ -44,35 +46,29 @@ const Row: React.FunctionComponent<IRowProps> = (props) => {
   };
   if (cols) {
     return gutters ?
-      <div className={[
-        styles['bit-row'],
-        styles['bit-grid-row'],
-        styles[`bit-grid-row-${cols}`],
-        (cols || 24) % childCount === 0 ? '' : styles['bit-grid-row-auto-fit'],
-        styles[`bit-grid-row-gutter-${gutters}`]].join(
-          ' ')} style={style}>{renderChild(cols)}</div> :
-      <div className={[
-        styles['bit-row'],
-        styles['bit-grid-row'],
-        styles[`bit-grid-row-${cols}`],
-        (cols || 24) % childCount === 0 ? '' : styles['bit-grid-row-auto-fit'],
-      ].join(
-          ' ')} style={style}>{renderChild(cols)}</div>;
+      <div className={
+        cls(
+            'bit-row',
+            'bit-grid-row',
+            `bit-grid-row-${cols}`,
+            {
+              'bit-grid-row-auto-fit': (cols || 24) % childCount !== 0,
+            },
+            `bit-grid-row-gutter-${gutters}`,
+        )
+      } style={style}>{renderChild(
+            cols)}</div> :
+      <div className={cls('bit-row', 'bit-grid-row', `bit-grid-row-${cols}`, {
+        'bit-grid-row-auto-fix': (cols || 24) % childCount !== 0,
+      })} style={style}>{renderChild(cols)}</div>;
   }
-  return gutters ? <div className={[
-    styles['bit-row'],
-    styles['bit-grid-row'],
-    styles['bit-grid-row-24'],
-      (cols || 24) % childCount === 0 ? '' : styles['bit-grid-row-auto-fit'],
-      styles[`bit-grid-row-gutter-${gutters}`]].join(
-      ' ')} style={style}>{renderChild(24)}</div> :
-    <div className={[
-      styles['bit-row'],
-      styles['bit-grid-row'],
-      styles['bit-grid-row-24'],
-      (cols || 24) % childCount === 0 ? '' : styles['bit-grid-row-auto-fit'],
-    ].join(
-        ' ')} style={style}>{renderChild(24)}</div>;
+  return gutters ?
+    <div className={cls('bit-row', 'bit-grid-row', `bit-grid-row-24`, {
+      'bit-grid-row-auto-fit': (cols || 24) % childCount !== 0,
+    }, `bit-grid-row-gutter-${gutters}`)} style={style}>{renderChild(24)}</div> :
+    <div className={cls('bit-row', 'bit-grid-row', 'bit-grid-row-24', {
+      'bit-grid-row-auto-fit': (cols || 24) % childCount !== 0,
+    })} style={style}>{renderChild(24)}</div>;
 };
 
 export default Row;

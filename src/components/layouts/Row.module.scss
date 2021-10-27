@@ -1,6 +1,8 @@
 @import "../../assets/styles/index";
 
 .bit-row {
+  padding: __calculate_rem(15) __calculate_rem(10);
+  
   &.bit-grid-row {
     display: grid;
     width: 100%;

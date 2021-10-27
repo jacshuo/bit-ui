@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Container.module.scss';
+import classNames from 'classnames/bind';
 
 export interface IContainer extends React.PropsWithChildren<any> {
   fluidSM?: boolean;
@@ -17,18 +18,19 @@ const Container: React.FunctionComponent<IContainer> = (props: IContainer) => {
     fluidXL,
     fluidXXL,
   } = props;
+  const cls = classNames.bind(styles)(
+      'bit-container',
+      {
+        'bit-container-fluid-sm': fluidSM,
+        'bit-container-fluid-md': fluidMD,
+        'bit-container-fluid-lg': fluidLG,
+        'bit-container-fluid-xl': fluidXL,
+        'bit-container-fluid-xxl': fluidXXL,
+      },
+  );
   return <>
     <div
-      className={
-        [
-          styles['bit-container'],
-          fluidSM ? styles['bit-container-fluid-sm'] : null,
-          fluidMD ? styles['bit-container-fluid-md'] : null,
-          fluidLG ? styles['bit-container-fluid-lg'] : null,
-          fluidXL ? styles['bit-container-fluid-xl'] : null,
-          fluidXXL ? styles['bit-container-fluid-xxl'] : null,
-        ].join(
-            ' ')}>{props.children}</div>
+      className={cls}>{props.children}</div>
   </>;
 };
 

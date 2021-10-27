@@ -2,6 +2,5 @@
 
 .bit-header {
   @include __header();
-  @include __box-shadow(__calculate-rem(0), __calculate-rem(0), __calculate-rem(10), __calculate-rem(0), $bit-palette-theme-accent-dark-4)
-  //@include __border_plain($bit-functional-palette-danger-primary-5, solid)
+  @include __box-shadow(__calculate-rem(0), __calculate-rem(0), __calculate-rem(5), __calculate-rem(1), $bit-theme-light-shadow)
 }

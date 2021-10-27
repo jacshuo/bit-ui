@@ -1,4 +1,5 @@
 @import "helper_functions";
+@import "variables";
 
 @mixin __opacity($opacity) {
   opacity: $opacity;
@@ -25,4 +26,20 @@
   -ms-border-radius: $radius;
   -khtml-border-radius: $radius;
   border-radius: $radius;
+}
+
+@mixin __control-hover-shadow() {
+  box-shadow: 0 0 $bit-theme-light-shadow-blur 0 $bit-theme-light-primary-light-hover;
+}
+
+@mixin __control-hover-success-shadow() {
+  box-shadow: 0 0 $bit-theme-light-shadow-blur 0 $bit-theme-light-success-hover;
+}
+
+@mixin __control-hover-warn-shadow() {
+  box-shadow: 0 0 $bit-theme-light-shadow-blur 0 $bit-theme-light-warn-hover;
+}
+
+@mixin __control-hover-danger-shadow() {
+  box-shadow: 0 0 $bit-theme-light-shadow-blur 0 $bit-theme-light-danger-hover;
 }
