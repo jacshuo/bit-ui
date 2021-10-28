@@ -31,7 +31,9 @@ $bit-general-control-large: __calculate_rem(40);
 
 // input prefix & suffix width
 $bit-general-input-prefix-width: __calculate_rem(70);
+$bit-general-input-prefix-width-value: 70;
 $bit-general-input-suffix-width: __calculate_rem(70);
+$bit-general-input-suffix-width-value: 70;
 
 // form item border/outline sizing
 $bit-general-control-thickness: 0;
@@ -84,6 +86,8 @@ $bit-general-sider-width: __calculate-rem(220);
 $bit-general-sider-percent-width: 15%;
 $bit-general-footer-height: 40px;
 
+$bit-general-control-clear-size: 16;
+$bit-general-control-clear-right: 10;
 
 //---theme---
 //---PRIMARY
@@ -184,4 +188,4 @@ $bit-theme-light-disabled-bg: rgba($bit-basic-light-palette-gray-scale-9, 1);
 $bit-theme-light-disabled-fill: rgba($bit-basic-light-palette-gray-scale-9, .05);
 //--- shadow 阴影色
 $bit-theme-light-shadow: rgba($bit-basic-light-palette-gray-scale-13, .5);
-$bit-theme-light-shadow-blur: __calculate_rem(4);
+$bit-theme-light-shadow-blur: __calculate_rem(6);

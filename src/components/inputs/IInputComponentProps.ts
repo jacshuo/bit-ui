@@ -15,16 +15,16 @@ export interface IInputComponentProps<T> extends React.PropsWithChildren<any> {
   danger?: boolean,
   rows?: number; // 输入行数，对textarea有效
   placeholder?: string;
-  loading?: (() => React.ReactNode) | boolean | null;
+  loading?: () => React.ReactNode | boolean | null;
   autoFocus?: boolean;
   focused?: boolean;
-  focus?: () => void;
-  blur?: () => void;
-  onFocus?: () => void;
+  focus?: (e: React.FocusEvent<any>) => void;
+  blur?: (e: React.FocusEvent<any>) => void;
+  onFocus?: (e: React.FocusEvent<any>) => void;
   onClear?: () => void;
-  onBlur?: () => void;
-  onChange?: () => void;
-  onInput?: () => void;
+  onBlur?: (e: React.FocusEvent<any>) => void;
+  onChange?: (e: React.ChangeEvent<any>) => void;
+  onInput?: (e: React.FormEvent<any>) => void;
   prefix?: string | (() => React.ReactNode) | null; // 输入框头部内容
   suffix?: (() => React.ReactNode) | string | null; // 输入框尾部内容
   separator?: (() => React.ReactNode) | string | null; // 成对输入框之间分隔符

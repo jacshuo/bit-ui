@@ -1,0 +1,25 @@
+@import "../../assets/styles/index";
+
+.bit-control-clear {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  right: __calculate-rem(10);
+  top: 50%;
+  margin-top: -(__calculate-rem($bit-general-control-clear-size/2));
+  width: __calculate_rem($bit-general-control-clear-size);
+  height: __calculate_rem($bit-general-control-clear-size);
+  border-radius: $bit-general-border-radius-full;
+  background-color: $bit-theme-light-bg-2;
+  z-index: $bit-general-z-index-affix;
+  cursor: pointer;
+  
+  &.with-suffix {
+    right: __calculate-rem($bit-general-input-suffix-width-value + $bit-general-control-clear-right);
+  }
+  
+  &.show {
+    display: flex;
+  }
+}

@@ -9,7 +9,7 @@
   
   input {
     margin: 0;
-    padding: 0 __calculate_rem(5);
+    padding: 0 __calculate_rem(10);
     outline: none;
     border: none;
     width: 100%;
@@ -101,10 +101,6 @@
     }
   }
   
-  .clear-icon {
-  
-  }
-  
   &.rounded {
     border-radius: $bit-general-border-radius-medium;
     
@@ -159,5 +155,6 @@
       color: $bit-theme-light-text-0;;
     }
   }
+  
   
 }
