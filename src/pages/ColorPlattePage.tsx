@@ -4,16 +4,16 @@ import Typography from '../components/typography';
 
 const {Container, Row, Col} = Layouts;
 const {H1} = Typography;
-const Layout: FunctionComponent<any> = (props) => {
+
+const ColorPlattePage: FunctionComponent<any> = (props) => {
   return <>
     <Container fluidXXL>
       <Row>
         <Col>
-          <H1>LAYOUT</H1>
+          <H1>COLOR</H1>
         </Col>
       </Row>
     </Container>
   </>;
 };
-
-export default Layout;
+export default ColorPlattePage;

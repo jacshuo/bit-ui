@@ -32,7 +32,7 @@
       @content;
     }
   } @else if ($point==xxl) {
-    // XX-Large devices (larger desktops, 1400px and up)
+    // XX-Large devices (larger desktops, 1600px and up)
     @media screen and (min-width: 1600px) {
       @content;
     }

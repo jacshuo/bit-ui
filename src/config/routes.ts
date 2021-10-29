@@ -1,8 +1,8 @@
 // 助手路由
 import {RouteProps} from 'react-router-dom';
-import Typography from '../pages/Typography';
-import Inputs from '../pages/Inputs';
-import ColorPlate from '../pages/ColorPlate';
+import TypographyPage from '../pages/TypographyPage';
+import InputsPage from '../pages/InputsPage';
+import ColorPlattePage from '../pages/ColorPlattePage';
 import Layout from '../pages/Layout';
 
 const bitRoutes: RouteProps[] = [
@@ -12,15 +12,15 @@ const bitRoutes: RouteProps[] = [
   },
   {
     path: '/typography',
-    component: Typography,
+    component: TypographyPage,
   },
   {
     path: '/inputs',
-    component: Inputs,
+    component: InputsPage,
   },
   {
     path: '/colors',
-    component: ColorPlate,
+    component: ColorPlattePage,
   },
 ];
 export default bitRoutes;
