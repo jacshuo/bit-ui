@@ -28,6 +28,17 @@
   } @else if ($size==lg) {
     border-radius: $bit-general-box-radius-lg;
   }
-  
+}
+
+@mixin __success() {
+  color: $bit-theme-light-success;
+}
+
+@mixin __warn() {
+  color: $bit-theme-light-warn;
+}
+
+@mixin __danger() {
+  color: $bit-theme-light-danger;
 }
 

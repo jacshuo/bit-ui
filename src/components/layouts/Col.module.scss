@@ -1,0 +1,50 @@
+@import '../../assets/styles/index';
+
+.bit-col {
+  position: relative;
+  
+  @each $bp in xs, sm, md, lg, xl, xxl {
+    @for $n from 0 through 24 {
+      &.bit-col-span-#{$n} {
+        width: percentage($n/24);
+      }
+      &.bit-col-offset-#{$n} {
+        margin-left: percentage($n/24);
+      }
+      &.bit-col-pull-#{$n} {
+        right: percentage($n/24)
+      }
+      &.bit-col-push-#{$n} {
+        left: percentage($n/24)
+      }
+      &.bit-col-order-#{$n} {
+        order: $n;
+      }
+      &.bit-col-#{$bp}-span-#{$n} {
+        @include __media-query($bp) {
+          width: percentage($n/24);
+        }
+      }
+      &.bit-col-#{$bp}-offset-#{$n} {
+        @include __media-query($bp) {
+          margin-left: percentage($n/24);
+        }
+      }
+      &.bit-col-#{$bp}-pull-#{$n} {
+        @include __media-query($bp) {
+          right: percentage($n/24)
+        }
+      }
+      &.bit-col-#{$bp}-push-#{$n} {
+        @include __media-query($bp) {
+          left: percentage($n/24)
+        }
+      }
+      &.bit-col-#{bp}-order-#{$n} {
+        @include __media-query($bp) {
+          order: $n;
+        }
+      }
+    }
+  }
+}

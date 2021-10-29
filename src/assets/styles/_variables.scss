@@ -2,15 +2,23 @@
 @import "layout_mixins";
 @import "colors";
 
+// layout
+$bit-general-row-padding-x: __calculate-rem(15);
+$bit-general-row-padding-y: __calculate-rem(10);
+$bit-general-row-margin-x: auto;
+$bit-general-row-margin-y: __calculate_rem(10);
+$bit-general-row-grid-num: 24;
+
 // sizing
 $bit-general-font-size-small: __calculate_rem(12);
 $bit-general-font-size-regular: __calculate_rem(14);
-$bit-general-font-size-header-6: __calculate_rem(16);
-$bit-general-font-size-header-5: __calculate_rem(18);
-$bit-general-font-size-header-4: __calculate_rem(20);
-$bit-general-font-size-header-3: __calculate_rem(24);
-$bit-general-font-size-header-2: __calculate_rem(28);
-$bit-general-font-size-header-1: __calculate_rem(32);
+$bit-general-font-size-header-h6: __calculate_rem(16);
+$bit-general-font-size-header-h5: __calculate_rem(18);
+$bit-general-font-size-header-h4: __calculate_rem(20);
+$bit-general-font-size-header-h3: __calculate_rem(24);
+$bit-general-font-size-header-h2: __calculate_rem(28);
+$bit-general-font-size-header-h1: __calculate_rem(32);
+
 // weight
 $bit-general-font-weight-light: 200;
 $bit-general-font-weight-regular: 400;

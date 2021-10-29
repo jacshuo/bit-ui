@@ -1,76 +1,41 @@
 @import "../../assets/styles/index";
 
 .bit-row {
-  padding: __calculate_rem(15) __calculate_rem(10);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: normal;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
   
-  &.bit-grid-row {
-    display: grid;
-    width: 100%;
-    @each $cols in 12, 18, 24 {
-      &.bit-grid-row-#{$cols} {
-        grid-template-columns: repeat($cols, minmax(1px, 1fr));
-        @for $gap from 0 through 50 {
-          &.bit-grid-row-gutter-#{$gap} {
-            grid-column-gap: __calculate-rem($gap);
-          }
-        }
-        
-        @each $break in sm, md, lg, xl, xxl {
-          @for $col from 0 through $cols {
-            .bit-grid-col-span-responsive-#{$break}-#{$col} {
-              @include __media-query($break) {
-                grid-column-start: span $col;
-              }
-            }
-          }
-        }
-        
-        @for $col from 0 through $cols {
-          .bit-grid-col-span-#{$col} {
-            grid-column-start: span $col;
-          }
-        }
-      }
-    }
-    
-    &.bit-grid-row-24 {
-      grid-template-columns: repeat(24, minmax(1px, 1fr));
-    }
-    
-    // grid自适应
-    &.bit-grid-row-auto-fit {
-      grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
-    }
-    
-    // col flex显示
-    .bit-grid-col-flex {
-      display: flex;
-    }
-    
-    @each $align in center, flex-start, flex-end {
-      .bit-grid-col-flex-align-items-#{$align} {
-        display: flex;
-        align-items: $align;
-      }
-    }
-    @each $justify in center, flex-start, flex-end {
-      .bit-grid-col-flex-justify-content-#{$justify} {
-        display: flex;
-        justify-content: $justify;
-      }
-    }
-    @each $align in center, flex-start, flex-end {
-      .bit-grid-col-flex-align-content-#{$align} {
-        display: flex;
-        align-content: $align;
-      }
-    }
-    @each $justify in center, flex-start, flex-end {
-      .bit-grid-col-flex-justify-items-#{$justify} {
-        display: flex;
-        justify-items: $justify;
+  @each $justify in start, center, end, space-around, space-between {
+    &.bit-row-flex-justify-#{$justify} {
+      @if $justify==start {
+        justify-content: flex-start;
+      } @else if $justify==center {
+        justify-content: center;
+      } @else if $justify==end {
+        justify-content: flex-end;
+      } @else if $justify==space-around {
+        justify-content: space-around;
+      } @else if $justify==space-between {
+        justify-content: space-between;
       }
     }
   }
   
+  @each $align in start, center, end, stretch {
+    &.bit-row-flex-align-#{$align} {
+      @if $align==start {
+        align-items: flex-start;
+      } @else if $align==center {
+        align-items: center;
+      } @else if $align==end {
+        align-items: flex-end;
+      } @else if $align==stretch {
+        align-items: stretch;
+      }
+    }
+  }
 }

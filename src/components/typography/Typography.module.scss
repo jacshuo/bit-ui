@@ -1,0 +1,201 @@
+@import '../../assets/styles/index';
+
+.bit-typography {
+  &.h1 {
+    font-size: $bit-general-font-size-header-h1;
+    color: $bit-theme-light-text-0;
+    font-weight: $bit-general-font-weight-regular;
+    
+    &.success {
+      @include --success();
+    }
+    
+    &.warn {
+      @include --warn();
+    }
+    
+    &.danger {
+      @include --danger();
+    }
+  }
+  
+  &.h2 {
+    font-size: $bit-general-font-size-header-h2;
+    color: $bit-theme-light-text-0;
+    font-weight: $bit-general-font-weight-regular;
+    
+    &.success {
+      @include --success();
+    }
+    
+    &.warn {
+      @include --warn();
+    }
+    
+    &.danger {
+      @include --danger();
+    }
+  }
+  
+  &.h3 {
+    font-size: $bit-general-font-size-header-h3;
+    color: $bit-theme-light-text-0;
+    font-weight: $bit-general-font-weight-regular;
+    
+    &.success {
+      @include --success();
+    }
+    
+    &.warn {
+      @include --warn();
+    }
+    
+    &.danger {
+      @include --danger();
+    }
+  }
+  
+  &.h4 {
+    font-size: $bit-general-font-size-header-h4;
+    color: $bit-theme-light-text-0;
+    font-weight: $bit-general-font-weight-regular;
+    
+    &.success {
+      @include --success();
+    }
+    
+    &.warn {
+      @include --warn();
+    }
+    
+    &.danger {
+      @include --danger();
+    }
+  }
+  
+  &.h5 {
+    font-size: $bit-general-font-size-header-h5;
+    color: $bit-theme-light-text-0;
+    font-weight: $bit-general-font-weight-regular;
+    
+    &.success {
+      @include --success();
+    }
+    
+    &.warn {
+      @include --warn();
+    }
+    
+    &.danger {
+      @include --danger();
+    }
+  }
+  
+  &.h6 {
+    font-size: $bit-general-font-size-header-h6;
+    color: $bit-theme-light-text-0;
+    font-weight: $bit-general-font-weight-regular;
+    
+    &.success {
+      @include --success();
+    }
+    
+    &.warn {
+      @include --warn();
+    }
+    
+    &.danger {
+      @include --danger();
+    }
+  }
+  
+  &.em {
+    color: $bit-theme-light-text-0;
+    font-weight: $bit-general-font-weight-bold;
+    font-style: italic;
+    
+    &.success {
+      @include --success();
+    }
+    
+    &.warn {
+      @include --warn();
+    }
+    
+    &.danger {
+      @include --danger();
+    }
+  }
+  
+  &.link {
+    font-weight: $bit-general-font-weight-regular;
+  }
+  
+  &.passage {
+    color: $bit-theme-light-text-1;
+    font-weight: $bit-general-font-weight-regular;
+    
+    &.success {
+      @include --success();
+    }
+    
+    &.warn {
+      @include --warn();
+    }
+    
+    &.danger {
+      @include --danger();
+    }
+  }
+  
+  &.quotation {
+    color: $bit-theme-light-text-3;
+    font-weight: $bit-general-font-weight-light;
+    
+    &.success {
+      @include --success();
+    }
+    
+    &.warn {
+      @include --warn();
+    }
+    
+    &.danger {
+      @include --danger();
+    }
+  }
+  
+  &.text {
+    color: $bit-theme-light-text-1;
+    font-weight: $bit-general-font-weight-regular;
+    
+    &.success {
+      @include --success();
+    }
+    
+    &.warn {
+      @include --warn();
+    }
+    
+    &.danger {
+      @include --danger();
+    }
+  }
+  
+  &.strong {
+    color: $bit-theme-light-text-1;
+    font-weight: $bit-general-font-weight-bold;
+    
+    &.success {
+      @include --success();
+    }
+    
+    &.warn {
+      @include --warn();
+    }
+    
+    &.danger {
+      @include --danger();
+    }
+  }
+}
