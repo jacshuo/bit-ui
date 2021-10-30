@@ -8,7 +8,10 @@ const Layout: FunctionComponent<any> = (props) => {
   return <>
     <Container fluidXXL>
       <Row>
-        <Col>
+        <Col span={3}>
+          <H1>LAYOUT</H1>
+        </Col>
+        <Col span={3}>
           <H1>LAYOUT</H1>
         </Col>
       </Row>

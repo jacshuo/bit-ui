@@ -29,14 +29,18 @@ const Row: React.FunctionComponent<IRowProps> = (props) => {
     Object.assign(rowStyle, {margin: `0 ${gutters as number / -2}px`});
     colPaddings.padding = `0 ${gutters as number / 2}px`;
   }
-
-
   const renderColumn = () => {
     return React.Children.map(children, (child) => {
-      if (child && typeof (child) in ['string', 'number']) {
-        return child;
-      } else {
-        return React.cloneElement(child as ReactElement, {colPaddings});
+      switch (typeof (child)) {
+        case 'string':
+          return child;
+        case 'number':
+          return child;
+        case 'object':
+          return React.cloneElement(child as ReactElement,
+              {colPaddings});
+        default:
+          return null;
       }
     });
   };
